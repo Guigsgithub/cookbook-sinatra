@@ -18,12 +18,10 @@ get '/about' do
 end
 
 get '/' do
-  @recipes = [ ["gateau", "chocolat"], ["tarte", "pomme" ]]
+  @recipes = [["gateau", "chocolat"], ["tarte", "pomme"]]
   erb :index
 end
 
 post '/recipe' do
   "The recipe is #{params[:name]} and The description is #{params[:description]}."
 end
-
-
