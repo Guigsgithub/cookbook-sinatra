@@ -8,5 +8,9 @@ configure :development do
 end
 
 get '/' do
-  'First web app'
+  erb :index
+end
+
+get '/about' do
+  erb :about
 end
