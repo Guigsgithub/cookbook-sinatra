@@ -2,6 +2,8 @@ require "sinatra"
 require "sinatra/reloader" if development?
 require "pry-byebug"
 require "better_errors"
+require 'csv'
+
 set :bind, '0.0.0.0'
 
 configure :development do
@@ -21,6 +23,8 @@ get '/' do
   @recipes = [["gateau", "chocolat"], ["tarte", "pomme"]]
   erb :index
 end
+
+get '/new'
 
 post '/recipe' do
   "The recipe is #{params[:name]} and The description is #{params[:description]}."
