@@ -1,5 +1,21 @@
-<% @usernames.each do |username| %>
+<% @recipes.each do |recipe| %>
   <li>
-    <%= username %>
+    <%= recipe %>
   </li>
 <% end %>
+
+
+<form action="/recipe" method="post" class="form-recipe">
+  <div class="form-recipe">
+    <label for="name">Enter the name of the recipe </label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="form-recipe">
+    <label for="description">Enter your description: </label>
+    <input type="text" name="description" id="description" required>
+  </div>
+  <div class="form-recipe">
+    <input type="submit" value="Submit your Recipe">
+  </div>
+</form>
+
